@@ -1,5 +1,5 @@
-import AppContainer from './app-container';
+import AppContainerProvider from './app-container-provider';
 
 export {
-    AppContainer
+    AppContainerProvider
 }

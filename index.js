@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {AppContainer} from './src/containers';
+import {AppContainerProvider} from './src/containers';
 import './global.scss'
 ReactDOM.render(
-  <AppContainer/>,
+  <AppContainerProvider/>,
   document.getElementById('app')
 );

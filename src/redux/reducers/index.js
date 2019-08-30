@@ -1,5 +1,5 @@
 
-import {combineReducers} from './node_modules/redux';
+import {combineReducers} from 'redux';
 import documents from './documents'
 import documentsMetadata from './document-meta-info'
 import activeFileIndex from './selected-file-index';
