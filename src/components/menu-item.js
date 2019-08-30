@@ -6,8 +6,8 @@ class MenuItem extends Component {
             <div className="menu-item">
                 <DocumentIcon/>
                 <div className='menu-title'>
-                    <span>Document 01</span>
-                    <span className="sub-title">Document 01</span>
+                    <span>{this.props.document.name}</span>
+                    <span className="sub-title">{this.props.document.type}</span>
                 </div>
             </div>
         );

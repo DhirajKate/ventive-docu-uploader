@@ -10,7 +10,7 @@ class AppContainer extends Component {
   render() {
     return (
       <div className="container">
-        <LeftBar />
+        <LeftBar documentList={this.props.documentsMetadata}/>
         <DocumentViewer />
       </div>
     );
@@ -30,8 +30,7 @@ const mapStateToProps = function({
 };
 const mapDispatchToProps = function(dispatch) {
   return {
-    setActiveFileIndex: bindActionCreators(setActiveFileIndex, dispatch),
-    addFile: bindActionCreators(addFile, dispatch)
+    setActiveFileIndex: bindActionCreators(setActiveFileIndex, dispatch)
   };
 };
 

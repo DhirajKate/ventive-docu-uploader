@@ -8,7 +8,12 @@ class FilesMenuSection extends Component {
                 <h1 className='menu-header'>
                     Files
                 </h1>
-                <MenuItem/>
+                {this.props.documentList.map(function(document,index){
+                    return (
+                        <MenuItem document={document} index={index}/>
+                    )
+                })}
+                
             </div>
         );
     }

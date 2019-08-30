@@ -2,7 +2,7 @@
 import {ADD_DOCUMENT} from '../actions/action-list';
 
 const documents = (state = [], action) =>{
- let newState;
+ let newState =[...state];
  switch (action.type) {
    case ADD_DOCUMENT:
      newState.push(action.document.file);

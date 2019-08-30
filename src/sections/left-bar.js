@@ -7,7 +7,7 @@ class LeftBar extends Component {
     return (
       <div className="left-bar-container">
         <Logo />
-        <FilesMenuSection/>
+        <FilesMenuSection {...this.props}/>
         <UploadButton/>
       </div>
     );

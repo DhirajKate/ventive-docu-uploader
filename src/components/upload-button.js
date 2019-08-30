@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import {connect} from 'react-redux';
 import UploadIcon from "../assets/upload.svg";
+import { addFile } from "../redux/actions";
 class UploadButton extends Component {
   constructor() {
     super({});
@@ -11,6 +14,21 @@ class UploadButton extends Component {
     this.inputOpenFileRef.current.click();
   }
 
+  onChangeFile(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    var file = event.target.files[0];
+    let document = {
+        file,
+        metadata:{
+            name:file.name,
+            type:file.type
+        }
+    }
+
+    this.props.addFile(document)
+}
+
   render() {
     return (
       <div className="upload-button-wrapper">
@@ -18,6 +36,7 @@ class UploadButton extends Component {
           ref={this.inputOpenFileRef}
           type="file"
           style={{ display: "none" }}
+          onChange={this.onChangeFile.bind(this)}
         />
         <button
           className="upload-button"
@@ -34,4 +53,17 @@ class UploadButton extends Component {
   }
 }
 
-export default UploadButton;
+const mapStateToProps = function() {
+    return {
+    };
+  };
+  const mapDispatchToProps = function(dispatch) {
+    return {
+      addFile: bindActionCreators(addFile, dispatch)
+    };
+  };
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(UploadButton);
