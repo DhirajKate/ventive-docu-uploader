@@ -1,17 +1,17 @@
 .document-wrapper {
+  display: flex;
+  padding-top: 70px;
+  max-height: 37px;
+  align-items: center;
+  .document-title {
+    align-self: center;
+    margin-left: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
     display: flex;
-    padding-top: 70px;
-    max-height: 37px;
-    align-items: center;
-    .document-title {
-      align-self: center;
-      margin-left: 20px;
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 36px;
-      display: flex;
-  
-      color: #2d1f3f;
-    }
+
+    color: #2d1f3f;
   }
+}

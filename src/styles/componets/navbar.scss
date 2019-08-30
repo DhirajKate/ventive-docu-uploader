@@ -1,28 +1,24 @@
-
-.navbar{
+.navbar {
   background-color: #070d59;
 
-  .menu-button{
+  .menu-button {
     display: inline-flex;
     margin-left: 25px;
     cursor: pointer;
   }
   .logo-wrapper {
-    padding:25px 25px;
+    padding: 25px 25px;
     display: inline-flex;
   }
   .logo {
     width: 208px;
     height: 37px;
   }
-  
 }
 
 $breakpoint-tablet: 768px;
 @media (min-width: $breakpoint-tablet) {
-  .navbar{
-  display: none
+  .navbar {
+    display: none;
   }
 }
-  
-  

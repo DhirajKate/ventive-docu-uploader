@@ -1,23 +1,22 @@
-
 $breakpoint-tablet: 768px;
 @media (max-width: $breakpoint-tablet) {
   .left-bar-container {
     display: none;
   }
 
-  .left-bar-container.open{
-      display: block;
+  .left-bar-container.open {
+    display: block;
     position: absolute;
     left: 0;
     height: 100vh;
     background-color: #070d59;
     width: 300px;
-    .left-bar-content{
-        display: flex;
-        height: calc(100vh - 100px);
-        flex:1;
-        flex-direction: column;
-        justify-content: space-between
+    .left-bar-content {
+      display: flex;
+      height: calc(100vh - 100px);
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }
@@ -29,12 +28,12 @@ $breakpoint-tablet: 768px;
     width: 27.5%;
     min-width: 300px;
 
-    .left-bar-content{
-        display: flex;
-        height: calc(100vh - 150px);
-        flex:1;
-        flex-direction: column;
-        justify-content: space-between
+    .left-bar-content {
+      display: flex;
+      height: calc(100vh - 150px);
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }

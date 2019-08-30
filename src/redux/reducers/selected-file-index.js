@@ -1,15 +1,14 @@
+import { SET_ACTIVE_FILE_INDEX } from "../actions/action-list";
 
-import {SET_ACTIVE_FILE_INDEX} from '../actions/action-list';
-
-const activeFileIndex = (state = 0, action) =>{
- let newState = state;
- switch (action.type) {
-   case SET_ACTIVE_FILE_INDEX:
-     newState= action.selectedIndex;
-     return newState;
-   default:
-     return state;
- }
-}
+const activeFileIndex = (state = 0, action) => {
+  let newState = state;
+  switch (action.type) {
+    case SET_ACTIVE_FILE_INDEX:
+      newState = action.selectedIndex;
+      return newState;
+    default:
+      return state;
+  }
+};
 
 export default activeFileIndex;

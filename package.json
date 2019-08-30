@@ -12,7 +12,8 @@
     "redux": "^4.0.4"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

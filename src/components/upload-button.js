@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import {connect} from 'react-redux';
 import UploadIcon from "../assets/upload.svg";
 import { addFile } from "../redux/actions";
 class UploadButton extends Component {
@@ -18,17 +18,17 @@ class UploadButton extends Component {
     event.stopPropagation();
     event.preventDefault();
     let file = event.target.files[0];
-   
-    let document = {
-        file,
-        metadata:{
-            name:file.name,
-            type:file.type
-        }
-    }
 
-    this.props.addFile(document)
-}
+    let document = {
+      file,
+      metadata: {
+        name: file.name,
+        type: file.type
+      }
+    };
+
+    this.props.addFile(document);
+  }
 
   render() {
     return (
@@ -54,17 +54,12 @@ class UploadButton extends Component {
   }
 }
 
-const mapStateToProps = function() {
-    return {
-    };
-  };
-  const mapDispatchToProps = function(dispatch) {
-    return {
-      addFile: bindActionCreators(addFile, dispatch)
-    };
-  };
-  
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(UploadButton);
+const mapStateToProps = () => ({});
+const mapDispatchToProps = dispatch => ({
+  addFile: bindActionCreators(addFile, dispatch)
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UploadButton);

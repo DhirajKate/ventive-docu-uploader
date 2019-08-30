@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import { LeftBar } from "../sections";
-import { DocumentViewer } from "../sections";
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { setActiveFileIndex, addFile } from "../redux/actions";
+import { DocumentViewer, LeftBar } from "../sections";
 class AppContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       activeDocument: null,
-      isOpen:false
+      isOpen: false
     };
   }
 
@@ -24,39 +21,33 @@ class AppContainer extends Component {
     }
   }
 
-  toggelNavbar(isOpen){
-      this.setState({
-        isOpen
-      })
+  toggelNavbar(isOpen) {
+    this.setState({
+      isOpen
+    });
   }
   render() {
     return (
       <div className="container">
-        <LeftBar documentList={this.props.documentsMetadata} isOpen={this.state.isOpen} toggelNavbar={this.toggelNavbar.bind(this)}/>
-        <DocumentViewer document={this.state.activeDocument} toggelNavbar={this.toggelNavbar.bind(this)}/>
+        <LeftBar
+          documentList={this.props.documentsMetadata}
+          isOpen={this.state.isOpen}
+          toggelNavbar={this.toggelNavbar.bind(this)}
+        />
+        <DocumentViewer
+          document={this.state.activeDocument}
+          toggelNavbar={this.toggelNavbar.bind(this)}
+        />
       </div>
     );
   }
 }
 
-const mapStateToProps = function({
-  documents,
-  documentsMetadata,
-  activeFileIndex
-}) {
-  return {
-    documents,
-    documentsMetadata,
-    activeFileIndex
-  };
-};
-const mapDispatchToProps = function(dispatch) {
-  return {
-    setActiveFileIndex: bindActionCreators(setActiveFileIndex, dispatch)
-  };
-};
+const mapStateToProps = ({ documents, documentsMetadata, activeFileIndex }) => ({
+  documents, documentsMetadata, activeFileIndex
+});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(AppContainer);
