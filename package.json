@@ -9,11 +9,12 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "url-loader": "^2.1.0"
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "dev": "webpack-dev-server"
+    "dev": "webpack -p --config ./webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

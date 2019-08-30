@@ -1,9 +1,9 @@
 import React from "react";
-
+import LogoImage from '../assets/logo.png'
 const Logo = () => {
   return (
     <div className="logo-wrapper">
-      <img className="logo" src={require("../assets/logo.png")}></img>
+      <img className="logo" src={LogoImage}></img>
     </div>
   );
 };
