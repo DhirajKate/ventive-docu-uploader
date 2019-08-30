@@ -1,0 +1,48 @@
+.menu-header {
+    width: 45px;
+    height: 32px;
+    margin-left: 53px;
+    margin-top: 50px;
+  
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 31px;
+    /* identical to box height, or 175% */
+    text-transform: uppercase;
+  
+    color: rgba(255, 255, 255, 0.27);
+  }
+  
+
+.menu-item {
+    width: 200px;
+    margin-left: 55px;
+    margin-bottom: 37px;
+    cursor: pointer;
+    display: flex;
+    .document-icon{
+      display: flex;
+      padding-top: 5px;
+    }
+    .menu-title {
+      display: flex;
+      flex-direction: column;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 31px;
+      color: #ffffff;
+      margin-left: 22px;
+      min-width: 170px;
+  
+      .sub-title {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.35);
+        font-weight: 200;
+      }
+    }
+  }
+  

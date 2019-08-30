@@ -1,0 +1,12 @@
+.empty-documents-container {
+  max-width: 634px;
+  padding: 70px;
+  text-align: center;
+  .empty-documents-message {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+  }
+}

@@ -1,0 +1,16 @@
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+  .left-bar-container {
+    display: none;
+  }
+}
+@media (min-width: $breakpoint-tablet) {
+  .left-bar-container {
+    position: relative;
+    height: 100vh;
+    background-color: #070d59;
+    width: 27.5%;
+    min-width: 300px;
+  }
+}

@@ -4,7 +4,7 @@ class Logo extends Component {
   render() {
     return (
       <div className="logo-wrapper">
-        <div className="logo"></div>
+        <img className="logo" src={require('../assets/logo.png')}></img>
       </div>
     );
   }

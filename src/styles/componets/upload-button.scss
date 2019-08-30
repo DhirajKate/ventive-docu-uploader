@@ -1,0 +1,36 @@
+
+
+.upload-button-wrapper {
+    position: absolute;
+    text-align: center;
+    bottom: 33px;
+    width: 100%;
+    .upload-button {
+      width: 80%;
+      max-width: 305px;
+      min-width: 200px;
+      height: 70px;
+      background: #f7b633;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      .upload-icon {
+        vertical-align: middle;
+        margin-top: 10px;
+      }
+  
+      .label {
+        margin-left: 14px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+  
+        color: #ffffff;
+      }
+    }
+  }
+  

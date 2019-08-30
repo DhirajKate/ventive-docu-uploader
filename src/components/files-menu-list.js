@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { MenuItem } from '../components';
+import { MenuItem } from '.';
 
-class FilesMenuSection extends Component {
+class FilesMenuList extends Component {
     render() {
         return (
             <div>
@@ -19,4 +19,4 @@ class FilesMenuSection extends Component {
     }
 }
 
-export default FilesMenuSection;
+export default FilesMenuList;
