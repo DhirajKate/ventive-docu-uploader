@@ -1,0 +1,2 @@
+export const ADD_DOCUMENT = "ADD_DOCUMENT";
+export const SET_ACTIVE_FILE_INDEX = "SET_ACTIVE_FILE_INDEX";
