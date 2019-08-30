@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DocumentTitle, NoDocumentMessage } from "../components";
+import { DocumentTitle, NoDocumentMessage, Navbar } from "../components";
 
 class DocumentViewer extends Component {
   constructor(props) {
@@ -26,15 +26,19 @@ class DocumentViewer extends Component {
   }
   render() {
     return (
-      <div className="document-viewer-container">
+      <div className="document-viewer-container" onClick={()=>this.props.toggelNavbar(false)}>
+        <Navbar toggelNavbar={this.props.toggelNavbar}/>
+        <React.Fragment>
         {this.props.document ? (
-          <div className="document-viewer-wrapper">
+          <div className="document-viewer-wrapper" >
             <DocumentTitle document={this.props.document} />
             <div className="document-content">{this.state.fileContent}</div>
           </div>
         ) : (
           <NoDocumentMessage />
+         
         )}
+         </React.Fragment>
       </div>
     );
   }

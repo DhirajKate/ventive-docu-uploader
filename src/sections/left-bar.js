@@ -3,10 +3,16 @@ import { FileMenuList, Logo, UploadButton } from "../components";
 class LeftBar extends Component {
   render() {
     return (
-      <div className="left-bar-container">
+      <div
+        className={
+          this.props.isOpen ? "left-bar-container open" : "left-bar-container"
+        }
+      >
         <Logo />
-        <FileMenuList {...this.props}/>
-        <UploadButton/>
+        <div className="left-bar-content">
+        <FileMenuList {...this.props} />
+        <UploadButton />
+        </div>
       </div>
     );
   }

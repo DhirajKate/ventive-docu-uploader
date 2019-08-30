@@ -4,16 +4,19 @@ import { MenuItem } from '.';
 class FilesMenuList extends Component {
     render() {
         return (
-            <div>
+            <div className="menu-list-container">
                 <h1 className='menu-header'>
                     Files
                 </h1>
-                {this.props.documentList.map(function(document,index){
+                <div className="menu-list">
+                {this.props.documentList.map((document,index)=>{
                     return (
-                        <MenuItem document={document} index={index}/>
+                        <MenuItem document={document} index={index} toggelNavbar={this.props.toggelNavbar}/>
                     )
                 })}
                 
+                </div>
+             
             </div>
         );
     }

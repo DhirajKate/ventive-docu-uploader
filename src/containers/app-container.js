@@ -8,7 +8,8 @@ class AppContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeDocument: null
+      activeDocument: null,
+      isOpen:false
     };
   }
 
@@ -22,11 +23,17 @@ class AppContainer extends Component {
       });
     }
   }
+
+  toggelNavbar(isOpen){
+      this.setState({
+        isOpen
+      })
+  }
   render() {
     return (
       <div className="container">
-        <LeftBar documentList={this.props.documentsMetadata} />
-        <DocumentViewer document={this.state.activeDocument} />
+        <LeftBar documentList={this.props.documentsMetadata} isOpen={this.state.isOpen} toggelNavbar={this.toggelNavbar.bind(this)}/>
+        <DocumentViewer document={this.state.activeDocument} toggelNavbar={this.toggelNavbar.bind(this)}/>
       </div>
     );
   }

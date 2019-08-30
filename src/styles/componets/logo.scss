@@ -1,11 +1,16 @@
 .logo-wrapper {
-    padding-left: 53px;
-    padding-top: 70px;
-  }
-  .logo {
-    width: 208px;
-    height: 37px;
-  }
-  
-  
-  
+  padding-left: 53px;
+  padding-top: 70px;
+}
+.logo {
+  width: 208px;
+  height: 37px;
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+    .logo-wrapper {
+        padding-left: 50px;
+        padding-top: 25px;
+      }
+}

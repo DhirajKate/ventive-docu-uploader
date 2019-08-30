@@ -13,9 +13,18 @@
     text-transform: uppercase;
   
     color: rgba(255, 255, 255, 0.27);
+
   }
   
 
+  .menu-list-container{
+    .menu-list{
+        overflow-y: auto;
+        height:calc(100% - 50px);
+    }
+    overflow-y: hidden;
+    height:calc(100% - 120px);
+}
 .menu-item {
     width: 200px;
     margin-left: 55px;

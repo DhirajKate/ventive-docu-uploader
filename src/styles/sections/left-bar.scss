@@ -4,6 +4,22 @@ $breakpoint-tablet: 768px;
   .left-bar-container {
     display: none;
   }
+
+  .left-bar-container.open{
+      display: block;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    background-color: #070d59;
+    width: 300px;
+    .left-bar-content{
+        display: flex;
+        height: calc(100vh - 100px);
+        flex:1;
+        flex-direction: column;
+        justify-content: space-between
+    }
+  }
 }
 @media (min-width: $breakpoint-tablet) {
   .left-bar-container {
@@ -12,5 +28,13 @@ $breakpoint-tablet: 768px;
     background-color: #070d59;
     width: 27.5%;
     min-width: 300px;
+
+    .left-bar-content{
+        display: flex;
+        height: calc(100vh - 150px);
+        flex:1;
+        flex-direction: column;
+        justify-content: space-between
+    }
   }
 }

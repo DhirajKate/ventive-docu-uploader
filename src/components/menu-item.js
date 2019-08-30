@@ -6,7 +6,7 @@ import DocumentIcon from '../assets/document-icon.svg'
 class MenuItem extends Component {
     render() {
         return (
-            <div className="menu-item" onClick={()=>this.props.setActiveFileIndex(this.props.index)}>
+            <div className="menu-item" onClick={()=>{this.props.setActiveFileIndex(this.props.index);this.props.toggelNavbar(false)}}>
                 <div className="document-icon">
                 <DocumentIcon/>
                 </div>
