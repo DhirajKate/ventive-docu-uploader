@@ -17,7 +17,8 @@ class UploadButton extends Component {
   onChangeFile(event) {
     event.stopPropagation();
     event.preventDefault();
-    var file = event.target.files[0];
+    let file = event.target.files[0];
+   
     let document = {
         file,
         metadata:{

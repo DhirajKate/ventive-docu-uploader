@@ -1,12 +1,6 @@
 .container{
     max-width: 1440px;
-    
+    display: flex;
+    margin:auto
 }
 
-.left-bar-container{
-    position: relative;
-    height: 100vh;
-    background-color: #070D59;
-    width: 27.5%;
-    min-width: 300px;
-}

@@ -7,11 +7,29 @@ import "./index.scss";
 import "../components/index.scss";
 import { setActiveFileIndex, addFile } from "../redux/actions";
 class AppContainer extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            activeDocument:null
+        }
+    }
+
+    componentWillReceiveProps(newProps){
+        console.log(newProps)
+        console.log(this.props)
+        if(this.props.documents.length!=newProps.documents.length ||this.props.activeFileIndex!=newProps.activeFileIndex){
+            console.log("newProps")
+            this.setState({
+                activeDocument:newProps.documents[newProps.activeFileIndex]
+            })
+        }
+    }
   render() {
+     
     return (
       <div className="container">
         <LeftBar documentList={this.props.documentsMetadata}/>
-        <DocumentViewer />
+        <DocumentViewer document = {this.state.activeDocument} />
       </div>
     );
   }
