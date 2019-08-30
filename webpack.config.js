@@ -17,7 +17,23 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true
+              sourceMap: false
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: ["file-loader"]
+      },
+      {
+        test: /\.svg$/,
+        loader: [
+          "babel-loader",
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: true // true outputs JSX tags
             }
           }
         ]
