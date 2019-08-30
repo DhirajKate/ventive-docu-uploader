@@ -1,0 +1,18 @@
+{
+  "name": "ventive-docu-uploader",
+  "version": "1.0.0",
+  "description": "Ventive assignment",
+  "main": "index.js",
+  "author": "Dhiraj Kate",
+  "license": "MIT",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.3"
+  }
+}
