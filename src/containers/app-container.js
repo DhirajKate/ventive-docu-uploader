@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LeftBar from './left-bar';
-import DocumentViewer from './document-viewer';
+import {LeftBar} from '../sections';
+import {DocumentViewer} from '../sections';
 import './index.scss';
 import '../components/index.scss'
 class AppContainer extends Component {
