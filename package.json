@@ -5,7 +5,10 @@
   "main": "index.js",
   "author": "Dhiraj Kate",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
