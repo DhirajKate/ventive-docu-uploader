@@ -6,7 +6,9 @@ import { addFile } from "../redux/actions";
 class UploadButton extends Component {
   constructor() {
     super({});
-
+    this.state = {
+      isError:false
+    }
     this.inputOpenFileRef = React.createRef();
   }
 
@@ -18,16 +20,21 @@ class UploadButton extends Component {
     event.stopPropagation();
     event.preventDefault();
     let file = event.target.files[0];
+    if(file.type=="text/plain" ||file.type=="application/pdf"){
+      let document = {
+        file,
+        metadata: {
+          name: file.name,
+          type: file.type
+        }
+      };
+  
+      this.props.addFile(document);
+    }else{
+      this.setState({isError:true})
+    }
 
-    let document = {
-      file,
-      metadata: {
-        name: file.name,
-        type: file.type
-      }
-    };
-
-    this.props.addFile(document);
+   
   }
 
   render() {

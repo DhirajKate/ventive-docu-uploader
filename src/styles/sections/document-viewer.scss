@@ -13,6 +13,7 @@
       margin-right: 70px;
       margin-bottom: 70px;
       background: #ffffff;
+      font-family: Poppins;
       border: 5px dotted #ff0000;
       box-sizing: border-box;
       padding: 25px;
@@ -37,6 +38,7 @@ $breakpoint-tablet: 768px;
       width: 90%;
       .document-content {
         margin-left: auto;
+        font-family: Poppins;
         margin-right: auto;
       }
     }
