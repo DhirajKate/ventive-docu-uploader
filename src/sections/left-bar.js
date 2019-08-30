@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Logo } from "../components";
+import { Logo, UploadButton } from "../components";
 import FilesMenuSection from "./files-menu-section";
 import './style.scss'
 class LeftBar extends Component {
@@ -8,6 +8,7 @@ class LeftBar extends Component {
       <div className="left-bar-container">
         <Logo />
         <FilesMenuSection/>
+        <UploadButton/>
       </div>
     );
   }
